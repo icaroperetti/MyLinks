@@ -1,3 +1,3 @@
 # MyLinks
 
-Projeto desenvolvido durante o react-native Insider do canal Sujeito Programador 
+Projeto desenvolvido durante o React Native Insider do canal Sujeito Programador 
