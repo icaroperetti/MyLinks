@@ -9,11 +9,14 @@ import {
 } from 'react-native';
 
 import {LinearGradient} from 'expo-linear-gradient';
-import StatusBarPage from '../../components/StatusBarPage';
 
+
+import StatusBarPage from '../../components/StatusBarPage';
 import Menu from '../../components/Menu';
 import ModalLink from '../../components/ModalLink';
+
 import api from '../../services/api';
+import {saveLink} from '../../utils/storeLinks';
 
 import {Feather} from '@expo/vector-icons';
 
@@ -47,8 +50,10 @@ export default function Home(){
             });
 
             setData(response.data);
-
             setModalVisible(true);
+
+            //Salvar link no storage
+            saveLink('links',response.data);
 
             Keyboard.dismiss();
             setLoading(false);
